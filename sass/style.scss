@@ -1,0 +1,145 @@
+@import 'utilities';
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 100vh;
+}
+
+.header {
+    background: url(../images/desktop-image-hero-1.jpg) center no-repeat;
+    background-size: cover;
+    grid-column: 1/7;
+    transition: 0.4s ease-in-out;
+    grid-row: 1/8;
+    padding: 2rem;
+    color: #fff;
+    .logo {
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 400px;
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        .close {
+            display: none;
+            cursor: pointer;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            li {
+                padding: 10px;
+                a {
+                    text-decoration: none;
+                    padding-bottom: 5px;
+                    color: #fff;
+                    text-transform: lowercase;
+                    &:hover {
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.discovery {
+    grid-column: 7/11;
+    grid-row: 1/8;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    div {
+        width: 400px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    button {
+        border: none;
+        background: none;
+        color: $very-dark-gray;
+        cursor: pointer;
+        transition: 0.4s;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 12px;
+        margin-top: 1rem;
+        font-weight: 700;
+        &:hover {
+            color: $dark-gray;
+        }
+    }
+}
+
+.about {
+    grid-column: 4/8;
+    grid-row: 8/11;
+    padding: 2rem;
+}
+
+.control-buttons {
+    grid-column: 7/8;
+    grid-row: 7/8;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    button {
+        width: 50%;
+        border: none;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.4s;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background: $very-dark-gray;
+        }
+        span {
+            font-size: 35px;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    }
+}
+
+.bg-dark {
+    grid-column: 1/4;
+    grid-row: 8/11;
+}
+
+.bg-ligth {
+    grid-column: 8/11;
+    grid-row: 8/11;
+}
+
+p {
+    color: $dark-gray;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+@import 'responsive'
